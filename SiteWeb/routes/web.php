@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\InviteController;
 use App\Http\Controllers\ProgrammeController;
+use App\Http\Controllers\SeriesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 
@@ -26,3 +27,5 @@ Route::get('/admin', [DashboardController::class, 'index'])
     ->middleware(['auth', 'admin']);
 
 Route::get('/invite', [InviteController::class, 'index']);
+
+Route::get('/series', [SeriesController::class, 'index']);
