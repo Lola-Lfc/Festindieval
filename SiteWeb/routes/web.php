@@ -5,6 +5,7 @@ use App\Http\Controllers\InviteController;
 use App\Http\Controllers\ProgrammeController;
 use App\Http\Controllers\SeriesController;
 use App\Http\Controllers\BilleterieController;
+use App\Http\Controllers\ExposantsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 
@@ -32,3 +33,5 @@ Route::get('/invite', [InviteController::class, 'index']);
 Route::get('/series', [SeriesController::class, 'index']);
 
 Route::get('/billeterie', [BilleterieController::class, 'index']);
+
+Route::get('/exposants', [ExposantsController::class, 'index']);
