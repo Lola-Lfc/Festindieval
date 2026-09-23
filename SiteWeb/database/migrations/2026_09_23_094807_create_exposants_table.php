@@ -6,20 +6,21 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('exposants', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('tag_id')->constrained('tags');
+            $table->text('nom');
+            $table->text('description');
+            $table->text('activite');
+            $table->string('logo')->nullable();
+            $table->string('site_web')->nullable();
+            $table->string('reseaux')->nullable();
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('exposants');

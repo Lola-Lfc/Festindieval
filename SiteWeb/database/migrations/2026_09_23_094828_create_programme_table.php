@@ -6,22 +6,22 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('programme', function (Blueprint $table) {
+        Schema::create('programmes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('invite_id')->constrained('invites');
+            $table->text('nom');
+            $table->text('description');
+            $table->dateTime('dt_heure_debut');
+            $table->dateTime('dt_heure_fin');
+            $table->integer('jour');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('programme');
+        Schema::dropIfExists('programmes');
     }
 };
