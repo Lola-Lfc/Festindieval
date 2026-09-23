@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\InviteController;
 use App\Http\Controllers\ProgrammeController;
 use App\Http\Controllers\SeriesController;
+use App\Http\Controllers\BilleterieController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 
@@ -29,3 +30,5 @@ Route::get('/admin', [DashboardController::class, 'index'])
 Route::get('/invite', [InviteController::class, 'index']);
 
 Route::get('/series', [SeriesController::class, 'index']);
+
+Route::get('/billeterie', [BilleterieController::class, 'index']);
