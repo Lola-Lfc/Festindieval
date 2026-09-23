@@ -1,0 +1,1 @@
+<h1>Bienvenue dans le panel administrateur</h1>
