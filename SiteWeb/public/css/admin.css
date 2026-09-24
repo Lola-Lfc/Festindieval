@@ -1,7 +1,15 @@
-.admin-dashboard {
+.admin-dashboard,
+.admin-users,
+.admin-series {
     max-width: 1100px;
     margin: 140px auto 80px;
     padding: 0 24px;
+}
+
+.admin-dashboard h1,
+.admin-users h1,
+.admin-series h1 {
+    margin-bottom: 30px;
 }
 
 .dashboard-stats {
@@ -24,4 +32,154 @@
 
 .stat-card strong {
     font-size: 2rem;
+}
+
+.admin-users table,
+.admin-series table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.admin-users th,
+.admin-users td,
+.admin-series th,
+.admin-series td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.admin-users th,
+.admin-series th {
+    background: #f5f5f5;
+}
+
+.admin-series td img {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.admin-users a,
+.admin-series a,
+.admin-users button,
+.admin-series button {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid #111;
+    border-radius: 6px;
+    background: white;
+    color: #111;
+    text-decoration: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+.admin-users a:hover,
+.admin-series a:hover,
+.admin-users button:hover,
+.admin-series button:hover {
+    background: #111;
+    color: white;
+}
+
+.admin-users form,
+.admin-series form {
+    margin-top: 20px;
+}
+
+.admin-users form div,
+.admin-series form div {
+    margin-bottom: 20px;
+}
+
+.admin-users label,
+.admin-series label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.admin-users input,
+.admin-users select,
+.admin-users textarea,
+.admin-series input,
+.admin-series select,
+.admin-series textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.admin-users textarea,
+.admin-series textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.admin-series form img {
+    display: block;
+    width: 180px;
+    max-height: 120px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.admin-errors {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+}
+
+@media (max-width: 800px) {
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .admin-users,
+    .admin-series {
+        overflow-x: auto;
+    }
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    color: black;
+    text-decoration: none;
+}
+
+a.stat-card {
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+a.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card span {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.stat-card.disabled {
+    opacity: 0.5;
 }
