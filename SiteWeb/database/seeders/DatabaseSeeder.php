@@ -17,11 +17,13 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Administrateur',
-            'email' => 'admin@festindival.com',
-            'password' => 'password',
-            'role' => 'admin',
-        ]);
+        User::updateOrCreate(
+            ['email' => 'admin@festindival.com'],
+            [
+                'name' => 'Administrateur',
+                'password' => 'password',
+                'role' => 'admin',
+            ],
+        );
     }
 }

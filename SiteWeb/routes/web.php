@@ -7,7 +7,11 @@ use App\Http\Controllers\ProgrammeController;
 use App\Http\Controllers\SeriesController;
 use App\Http\Controllers\BilleterieController;
 use App\Http\Controllers\ExposantsController;
+<<<<<<< Updated upstream
 use App\Http\Controllers\Admin\SeriesController as AdminSeriesController;
+=======
+use App\Http\Controllers\Admin\ExposantController as AdminExposantController;
+>>>>>>> Stashed changes
 
 // Import Illuminate
 use Illuminate\Support\Facades\Route;
@@ -37,7 +41,12 @@ Route::prefix('admin')
     ->middleware(['auth', 'admin'])
     ->group(function () {
 
+<<<<<<< Updated upstream
     // Panel Admin Dashboard
+=======
+        Route::resource('exposants', AdminExposantController::class);
+        
+>>>>>>> Stashed changes
         Route::get('/', [DashboardController::class, 'index'])
             ->name('dashboard');
 
