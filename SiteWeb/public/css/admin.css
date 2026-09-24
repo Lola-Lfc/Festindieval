@@ -1,0 +1,27 @@
+.admin-dashboard {
+    max-width: 1100px;
+    margin: 140px auto 80px;
+    padding: 0 24px;
+}
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    padding: 24px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+}
+
+.stat-card h2 {
+    margin: 0 0 12px;
+    font-size: 1rem;
+}
+
+.stat-card strong {
+    font-size: 2rem;
+}
