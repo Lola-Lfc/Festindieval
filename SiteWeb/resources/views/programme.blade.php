@@ -1,7 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Programme</title>
+    <link rel="stylesheet" href="{{ asset('css/programme.css') }}">
+</head>
+<body>
+
 <h1>Programme</h1>
 
-@foreach ($programmes as $programme)
-    <h2>{{ $programme->nom }}</h2>
-    <p>{{ $programme->description }}</p>
-    <p>{{ $programme->dt_heure_debut }}</p>
-@endforeach
+<div class="calendrier">
+
+    @foreach ($programmes as $jour => $evenements)
+
+        <div class="jour">
+
+            <h2>Jour {{ $jour }}</h2>
+
+            @foreach ($evenements as $programme)
+
+                <div class="evenement">
+
+                    <div class="horaire">
+                        {{ \Carbon\Carbon::parse($programme->dt_heure_debut)->format('H:i') }}
+                        -
+                        {{ \Carbon\Carbon::parse($programme->dt_heure_fin)->format('H:i') }}
+                    </div>
+
+                    <h3>{{ $programme->nom }}</h3>
+
+                    @if ($programme->invite)
+                        <p class="invite">
+                            Présenté par {{ $programme->invite->nom }}
+                        </p>
+                    @endif
+
+                    <p class="description">
+                        {{ $programme->description }}
+                    </p>
+
+                </div>
+
+            @endforeach
+
+        </div>
+
+    @endforeach
+
+</div>
+
+</body>
+</html>
