@@ -2,6 +2,8 @@
 
 @section('content')
 
+<main class="admin-content admin-exposants">
+
 <h1>Gestion des exposants</h1>
 
 @if (session('success'))
@@ -48,4 +50,5 @@
     </tbody>
 </table>
 
+</main>
 @endsection

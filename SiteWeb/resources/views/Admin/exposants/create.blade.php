@@ -2,10 +2,12 @@
 
 @section('content')
 
+<main class="admin-content admin-exposants">
+
 <h1>Ajouter un exposant</h1>
 
 @if ($errors->any())
-    <ul>
+    <ul class="admin-errors">
         @foreach ($errors->all() as $error)
             <li>{{ $error }}</li>
         @endforeach
@@ -45,4 +47,5 @@
     <button type="submit">Ajouter</button>
 </form>
 
+</main>
 @endsection

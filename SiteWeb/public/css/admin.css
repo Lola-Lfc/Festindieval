@@ -1,16 +1,26 @@
 .admin-dashboard,
+.admin-content,
+.admin-exposants,
+.admin-billets,
+.admin-dons,
 .admin-users,
 .admin-series,
-.admin-tags {
+.admin-tags,
+.admin-typebillets {
     max-width: 1100px;
     margin: 140px auto 80px;
     padding: 0 24px;
 }
 
 .admin-dashboard h1,
+.admin-content h1,
+.admin-exposants h1,
+.admin-billets h1,
+.admin-dons h1,
 .admin-users h1,
 .admin-series h1,
-.admin-tags h1 {
+.admin-tags h1,
+.admin-typebillets h1 {
     margin-bottom: 30px;
 }
 
@@ -60,9 +70,14 @@ a.stat-card:hover {
     opacity: 0.5;
 }
 
+.admin-content table,
+.admin-exposants table,
+.admin-billets table,
+.admin-dons table,
 .admin-users table,
 .admin-series table,
-.admin-tags table {
+.admin-tags table,
+.admin-typebillets table {
     width: 100%;
     margin-top: 25px;
     border-collapse: collapse;
@@ -71,20 +86,35 @@ a.stat-card:hover {
     overflow: hidden;
 }
 
+.admin-content th,
+.admin-content td,
+.admin-exposants th,
+.admin-exposants td,
+.admin-billets th,
+.admin-billets td,
+.admin-dons th,
+.admin-dons td,
 .admin-users th,
 .admin-users td,
 .admin-series th,
 .admin-series td,
 .admin-tags th,
-.admin-tags td {
+.admin-tags td,
+.admin-typebillets th,
+.admin-typebillets td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
+.admin-content th,
+.admin-exposants th,
+.admin-billets th,
+.admin-dons th,
 .admin-users th,
 .admin-series th,
-.admin-tags th {
+.admin-tags th,
+.admin-typebillets th {
     background: #f5f5f5;
 }
 
@@ -95,12 +125,22 @@ a.stat-card:hover {
     border-radius: 6px;
 }
 
+.admin-content a,
+.admin-exposants a,
+.admin-billets a,
+.admin-dons a,
 .admin-users a,
 .admin-series a,
 .admin-tags a,
+.admin-typebillets a,
+.admin-content button,
+.admin-exposants button,
+.admin-billets button,
+.admin-dons button,
 .admin-users button,
 .admin-series button,
-.admin-tags button {
+.admin-tags button,
+.admin-typebillets button {
     display: inline-block;
     padding: 8px 12px;
     border: 1px solid #111;
@@ -112,36 +152,73 @@ a.stat-card:hover {
     cursor: pointer;
 }
 
+.admin-content a:hover,
+.admin-exposants a:hover,
+.admin-billets a:hover,
+.admin-dons a:hover,
 .admin-users a:hover,
 .admin-series a:hover,
 .admin-tags a:hover,
+.admin-typebillets a:hover,
+.admin-content button:hover,
+.admin-exposants button:hover,
+.admin-billets button:hover,
+.admin-dons button:hover,
 .admin-users button:hover,
 .admin-series button:hover,
-.admin-tags button:hover {
+.admin-tags button:hover,
+.admin-typebillets button:hover {
     background: #111;
     color: white;
 }
 
+.admin-content form,
+.admin-exposants form,
+.admin-billets form,
+.admin-dons form,
 .admin-users form,
 .admin-series form,
-.admin-tags form {
+.admin-tags form,
+.admin-typebillets form {
     margin-top: 20px;
 }
 
+.admin-content form div,
+.admin-exposants form div,
+.admin-billets form div,
+.admin-dons form div,
 .admin-users form div,
 .admin-series form div,
-.admin-tags form div {
+.admin-tags form div,
+.admin-typebillets form div {
     margin-bottom: 20px;
 }
 
+.admin-content label,
+.admin-exposants label,
+.admin-billets label,
+.admin-dons label,
 .admin-users label,
 .admin-series label,
-.admin-tags label {
+.admin-tags label,
+.admin-typebillets label {
     display: block;
     margin-bottom: 6px;
     font-weight: bold;
 }
 
+.admin-content input,
+.admin-content select,
+.admin-content textarea,
+.admin-exposants input,
+.admin-exposants select,
+.admin-exposants textarea,
+.admin-billets input,
+.admin-billets select,
+.admin-billets textarea,
+.admin-dons input,
+.admin-dons select,
+.admin-dons textarea,
 .admin-users input,
 .admin-users select,
 .admin-users textarea,
@@ -159,9 +236,14 @@ a.stat-card:hover {
     font: inherit;
 }
 
+.admin-content textarea,
+.admin-exposants textarea,
+.admin-billets textarea,
+.admin-dons textarea,
 .admin-users textarea,
 .admin-series textarea,
-.admin-tags textarea {
+.admin-tags textarea,
+.admin-typebillets textarea {
     min-height: 120px;
     resize: vertical;
 }
@@ -183,14 +265,26 @@ a.stat-card:hover {
     background: white;
 }
 
+.admin-content > p,
+.admin-exposants > p,
+.admin-billets > p,
+.admin-dons > p {
+    margin: 20px 0;
+}
+
 @media (max-width: 800px) {
     .dashboard-stats {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .admin-content,
+    .admin-exposants,
+    .admin-billets,
+    .admin-dons,
     .admin-users,
     .admin-series,
-    .admin-tags {
+    .admin-tags,
+    .admin-typebillets {
         overflow-x: auto;
     }
 }

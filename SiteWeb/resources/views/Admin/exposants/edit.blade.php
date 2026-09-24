@@ -2,10 +2,12 @@
 
 @section('content')
 
+<main class="admin-content admin-exposants">
+
 <h1>Modifier l'exposant {{ $exposant->nom }}</h1>
 
 @if ($errors->any())
-    <ul>
+    <ul class="admin-errors">
         @foreach ($errors->all() as $error)
             <li>{{ $error }}</li>
         @endforeach
@@ -88,4 +90,5 @@
     </a>
 </form>
 
+</main>
 @endsection
