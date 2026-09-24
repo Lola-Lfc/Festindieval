@@ -20,11 +20,11 @@
             <span>Gérer les invités</span>
         </div>
 
-        <div class="stat-card disabled">
+        <a href="{{ route('admin.exposants.index') }}" class="stat-card">
             <h2>Exposants</h2>
             <strong>{{ $exposantsCount }}</strong>
             <span>Gérer les exposants</span>
-        </div>
+        </a>
 
         <a href="{{ route('admin.series.index') }}" class="stat-card">
             <h2>Séries</h2>
