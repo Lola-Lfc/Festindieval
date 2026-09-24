@@ -44,23 +44,23 @@
             <span>Gérer les types de billets</span>
         </a>
 
-        <div class="stat-card disabled">
+        <a href="{{ route('admin.programmes.index') }}" class="stat-card">
             <h2>Programmes</h2>
             <strong>{{ $programmesCount }}</strong>
             <span>Gérer les programmes</span>
-        </div>
+        </a>
 
-        <div class="stat-card disabled">
+        <a href="{{ route('admin.billets.index') }}" class="stat-card">
             <h2>Billets</h2>
             <strong>{{ $billetsCount }}</strong>
             <span>Voir et rembourser les billets</span>
-        </div>
+        </a>
 
-        <div class="stat-card disabled">
+        <a href="{{ route('admin.dons.index') }}" class="stat-card">
             <h2>Dons</h2>
             <strong>{{ $donsCount }}</strong>
             <span>Consulter les dons</span>
-        </div>
+        </a>
 
     </section>
 

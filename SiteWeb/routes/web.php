@@ -16,6 +16,8 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\TypebilletController;
+use App\Http\Controllers\Admin\BilletController;
+use App\Http\Controllers\Admin\DonController;
 use App\Http\Controllers\Admin\SeriesController as AdminSeriesController;
 use App\Http\Controllers\Admin\ExposantController as AdminExposantController;
 use App\Http\Controllers\Admin\InviteController as AdminInviteController;
@@ -105,6 +107,16 @@ Route::prefix('admin')
             ->name('typebillets.update');
         Route::delete('/typebillets/{typebillet}', [TypebilletController::class, 'destroy'])
             ->name('typebillets.destroy');
+    
+    //Panel Admin Billets
+        Route::get('/billets', [BilletController::class, 'index'])
+            ->name('billets.index');
+        Route::delete('/billets/{billet}/refund', [BilletController::class, 'refund'])
+            ->name('billets.refund');
+
+    //Panel Admin Dons
+        Route::get('/dons', [DonController::class, 'index'])
+            ->name('dons.index');
     });
 
 Route::get('/invite', [InviteController::class, 'index']);
