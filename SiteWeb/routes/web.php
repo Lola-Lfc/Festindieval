@@ -19,8 +19,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\TagController;
-use App\Http\Controllers\Admin\SeriesController as AdminSeriesController;
-use App\Http\Controllers\Admin\ExposantController as AdminExposantController;
 
 Route::get('/', function () {
     return view('welcome');
