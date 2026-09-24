@@ -45,8 +45,21 @@
         </div>
 
         <div class="stat-card disabled">
-            <h2>Types de billets</h2>
-            <span>Gérer les types de billets</span>
+            <h2>Programmes</h2>
+            <strong>{{ $programmesCount }}</strong>
+            <span>Gérer les programmes</span>
+        </div>
+
+        <div class="stat-card disabled">
+            <h2>Billets</h2>
+            <strong>{{ $billetsCount }}</strong>
+            <span>Voir et rembourser les billets</span>
+        </div>
+
+        <div class="stat-card disabled">
+            <h2>Dons</h2>
+            <strong>{{ $donsCount }}</strong>
+            <span>Consulter les dons</span>
         </div>
 
     </section>

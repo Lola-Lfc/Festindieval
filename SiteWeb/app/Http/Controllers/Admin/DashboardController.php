@@ -10,6 +10,8 @@ use App\Models\User;
 use App\Models\Seriesindee;
 use App\Models\Tag;
 use App\Models\Typebillet;
+use App\Models\Billets;
+use App\Models\Don;
 use Illuminate\View\View;
 
 class DashboardController extends Controller
@@ -23,6 +25,8 @@ class DashboardController extends Controller
         $seriesCount = Seriesindee::count();
         $tagsCount = Tag::count();
         $typebilletsCount = Typebillet::count();
+        $billetsCount = Billets::count();
+        $donsCount = Don::count();
 
         return view('Admin.dashboard', compact(
             'invitesCount',
@@ -31,7 +35,9 @@ class DashboardController extends Controller
             'usersCount',
             'seriesCount',
             'tagsCount',
-            'typebilletsCount'
+            'typebilletsCount',
+            'billetsCount',
+            'donsCount'
         ));
     }
 }
