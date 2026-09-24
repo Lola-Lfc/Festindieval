@@ -1,6 +1,7 @@
 .admin-dashboard,
 .admin-users,
-.admin-series {
+.admin-series,
+.admin-tags {
     max-width: 1100px;
     margin: 140px auto 80px;
     padding: 0 24px;
@@ -8,7 +9,8 @@
 
 .admin-dashboard h1,
 .admin-users h1,
-.admin-series h1 {
+.admin-series h1,
+.admin-tags h1 {
     margin-bottom: 30px;
 }
 
@@ -19,10 +21,15 @@
 }
 
 .stat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     padding: 24px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background: white;
+    color: black;
+    text-decoration: none;
 }
 
 .stat-card h2 {
@@ -34,8 +41,28 @@
     font-size: 2rem;
 }
 
+.stat-card span {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+a.stat-card {
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+a.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card.disabled {
+    opacity: 0.5;
+}
+
 .admin-users table,
-.admin-series table {
+.admin-series table,
+.admin-tags table {
     width: 100%;
     margin-top: 25px;
     border-collapse: collapse;
@@ -47,14 +74,17 @@
 .admin-users th,
 .admin-users td,
 .admin-series th,
-.admin-series td {
+.admin-series td,
+.admin-tags th,
+.admin-tags td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
 .admin-users th,
-.admin-series th {
+.admin-series th,
+.admin-tags th {
     background: #f5f5f5;
 }
 
@@ -67,8 +97,10 @@
 
 .admin-users a,
 .admin-series a,
+.admin-tags a,
 .admin-users button,
-.admin-series button {
+.admin-series button,
+.admin-tags button {
     display: inline-block;
     padding: 8px 12px;
     border: 1px solid #111;
@@ -82,24 +114,29 @@
 
 .admin-users a:hover,
 .admin-series a:hover,
+.admin-tags a:hover,
 .admin-users button:hover,
-.admin-series button:hover {
+.admin-series button:hover,
+.admin-tags button:hover {
     background: #111;
     color: white;
 }
 
 .admin-users form,
-.admin-series form {
+.admin-series form,
+.admin-tags form {
     margin-top: 20px;
 }
 
 .admin-users form div,
-.admin-series form div {
+.admin-series form div,
+.admin-tags form div {
     margin-bottom: 20px;
 }
 
 .admin-users label,
-.admin-series label {
+.admin-series label,
+.admin-tags label {
     display: block;
     margin-bottom: 6px;
     font-weight: bold;
@@ -110,7 +147,10 @@
 .admin-users textarea,
 .admin-series input,
 .admin-series select,
-.admin-series textarea {
+.admin-series textarea,
+.admin-tags input,
+.admin-tags select,
+.admin-tags textarea {
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
@@ -120,7 +160,8 @@
 }
 
 .admin-users textarea,
-.admin-series textarea {
+.admin-series textarea,
+.admin-tags textarea {
     min-height: 120px;
     resize: vertical;
 }
@@ -129,8 +170,8 @@
     display: block;
     width: 180px;
     max-height: 120px;
-    object-fit: cover;
     margin-bottom: 10px;
+    object-fit: cover;
     border-radius: 6px;
 }
 
@@ -148,38 +189,8 @@
     }
 
     .admin-users,
-    .admin-series {
+    .admin-series,
+    .admin-tags {
         overflow-x: auto;
     }
-}
-
-.stat-card {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 24px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: white;
-    color: black;
-    text-decoration: none;
-}
-
-a.stat-card {
-    cursor: pointer;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-a.stat-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.stat-card span {
-    font-size: 0.9rem;
-    color: #666;
-}
-
-.stat-card.disabled {
-    opacity: 0.5;
 }
