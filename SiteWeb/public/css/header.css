@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;800&display=swap');
+
+/* Style général */
+body {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #e2e8f0;
+    padding-top: 120px;
+}
+
+/* Header flottant - Largeur élargie à 1250px */
+.floating-header {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 96%;
+    max-width: 1250px;
+}
+
+/* Capsule principale découpée en 30 colonnes exactes */
+.header-container {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 100px;
+    display: grid;
+    /* 5fr + 8fr + 4fr + 4fr + 4fr + 5fr = 30fr */
+    grid-template-columns: 5fr 8fr 4fr 4fr 4fr 5fr;
+    align-items: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    height: 66px;
+    padding: 0 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Alignement générique des items */
+.nav-item {
+    color: #0f172a;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.nav-item:hover {
+    color: #000000;
+    font-weight: 800;
+}
+
+/* Zone du LOGO (8/30) */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+}
+
+/* Boîte LOGO */
+.logo-box {
+    border: 2px solid #000000;
+    border-radius: 12px;
+    padding: 6px 24px;
+    background: #ffffff;
+    box-shadow: 2px 2px 0px #000000;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.logo-box:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0px #000000;
+}
+
+.logo-text {
+    font-weight: 800;
+    font-size: 16px;
+    color: #000000;
+    letter-spacing: 1.5px;
+}
+
+/* Icône Billetterie */
+.billetterie-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.bolt {
+    font-style: normal;
+    display: inline-block;
+    animation: pulse 1.8s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.25); }
+}
+
+/* --- SÉPARATEUR INCURVÉ DE TYPE SABLIER --- */
+.border-sep {
+    position: relative;
+}
+
+.border-sep::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background-color: #000000;
+    /* Incurvation noire avec passage courbe blanc au centre */
+    clip-path: path("M 0 0 C 12 16, 12 50, 0 66 L 20 66 C 8 50, 8 16, 20 0 Z");
+    z-index: 5;
+    pointer-events: none;
+}
