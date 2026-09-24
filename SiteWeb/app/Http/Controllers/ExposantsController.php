@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Exposant;
 use App\Models\Tag;
-use App\Models\Exposant;
-use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class ExposantsController extends Controller
