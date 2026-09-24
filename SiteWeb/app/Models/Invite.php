@@ -7,4 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Invite extends Model
 {
     protected $guarded = [];
+
+    public function tag()
+    {
+        return $this->belongsTo(Tag::class);
+    }
 }
