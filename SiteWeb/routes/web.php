@@ -25,8 +25,13 @@ Route::post('/logout', [AuthController::class, 'logout'])
     ->middleware('auth')
     ->name('logout');
 
-Route::get('/admin', [DashboardController::class, 'index'])
-    ->middleware(['auth', 'admin']);
+Route::prefix('admin')
+    ->name('admin.')
+    ->middleware(['auth', 'admin'])
+    ->group(function () {
+        Route::get('/', [DashboardController::class, 'index'])
+            ->name('dashboard');
+    });
 
 Route::get('/invite', [InviteController::class, 'index']);
 
