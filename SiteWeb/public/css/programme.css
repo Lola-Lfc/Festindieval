@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+
+.calendrier {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.jour {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.jour > h2 {
+    margin: 0;
+    padding: 15px;
+    background: #222;
+    color: white;
+    text-align: center;
+}
+
+.evenement {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.evenement:last-child {
+    border-bottom: none;
+}
+
+.horaire {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.evenement h3 {
+    margin: 0 0 8px;
+}
+
+.invite {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.description {
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+@media (max-width: 700px) {
+    .calendrier {
+        grid-template-columns: 1fr;
+    }
+}

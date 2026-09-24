@@ -8,7 +8,11 @@ class ProgrammeController extends Controller
 {
     public function index()
     {
-        $programmes = Programme::all();
+        $programmes = Programme::with('invite')
+            ->orderBy('jour')
+            ->orderBy('dt_heure_debut')
+            ->get()
+            ->groupBy('jour');
 
         return view('programme', compact('programmes'));
     }
