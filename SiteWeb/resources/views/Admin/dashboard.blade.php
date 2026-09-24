@@ -14,11 +14,11 @@
             <span>Gérer les utilisateurs</span>
         </a>
 
-        <div class="stat-card disabled">
+        <a href="{{ route('admin.invites.index') }}" class="stat-card">
             <h2>Invités</h2>
             <strong>{{ $invitesCount }}</strong>
             <span>Gérer les invités</span>
-        </div>
+        </a>
 
         <a href="{{ route('admin.exposants.index') }}" class="stat-card">
             <h2>Exposants</h2>
