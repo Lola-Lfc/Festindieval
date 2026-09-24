@@ -12,4 +12,9 @@ class Invite extends Model
     {
         return $this->belongsTo(Tag::class);
     }
+
+    public function programmes()
+    {
+        return $this->hasMany(Programme::class);
+    }
 }

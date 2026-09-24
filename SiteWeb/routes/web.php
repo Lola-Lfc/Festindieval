@@ -7,6 +7,10 @@ use App\Http\Controllers\ProgrammeController;
 use App\Http\Controllers\SeriesController;
 use App\Http\Controllers\BilleterieController;
 use App\Http\Controllers\ExposantsController;
+use App\Http\Controllers\Admin\SeriesController as AdminSeriesController;
+use App\Http\Controllers\Admin\ExposantController as AdminExposantController;
+use App\Http\Controllers\Admin\InviteController as AdminInviteController;
+use App\Http\Controllers\Admin\ProgrammeController as AdminProgrammeController;
 
 // Import Illuminate
 use Illuminate\Support\Facades\Route;
@@ -41,6 +45,8 @@ Route::prefix('admin')
 
     // Panel Admin Dashboard
         Route::resource('exposants', AdminExposantController::class);
+        Route::resource('invites', AdminInviteController::class);
+        Route::resource('programmes', AdminProgrammeController::class);
         
         Route::get('/', [DashboardController::class, 'index'])
             ->name('dashboard');

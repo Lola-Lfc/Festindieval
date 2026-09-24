@@ -11,60 +11,38 @@ class ExposantController extends Controller
 {
     public function index()
     {
-        $exposants = Exposant::with('tag')->get();
+        $exposants = Exposant::with('tag')->orderBy('nom')->get();
 
         return view('Admin.exposants.index', compact('exposants'));
     }
 
     public function create()
     {
-        $tags = Tag::all();
+        $tags = Tag::orderBy('nom')->get();
 
         return view('Admin.exposants.create', compact('tags'));
     }
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'tag_id' => 'required|exists:tags,id',
-            'nom' => 'required|string',
-            'description' => 'required|string',
-            'activite' => 'required|string',
-            'logo' => 'nullable|string',
-            'site_web' => 'nullable|string',
-            'reseaux' => 'nullable|string',
-        ]);
+        Exposant::create($this->validateExposant($request));
 
-        Exposant::create($validated);
-
-        return redirect()
-            ->route('admin.exposants.index')
-            ->with('success', 'Exposant ajouté avec succès.');
+        return redirect()->route('admin.exposants.index')
+            ->with('success', 'Exposant créé avec succès.');
     }
 
     public function edit(Exposant $exposant)
     {
-        $tags = Tag::all();
+        $tags = Tag::orderBy('nom')->get();
 
         return view('Admin.exposants.edit', compact('exposant', 'tags'));
     }
 
     public function update(Request $request, Exposant $exposant)
     {
-        $validated = $request->validate([
-            'tag_id' => 'required|exists:tags,id',
-            'nom' => 'required|string',
-            'description' => 'required|string',
-            'activite' => 'required|string',
-            'logo' => 'nullable|string',
-            'site_web' => 'nullable|string',
-            'reseaux' => 'nullable|string',
-        ]);
+        $exposant->update($this->validateExposant($request));
 
-        $exposant->update($validated);
-
-        return redirect()
-            ->route('admin.exposants.index')
+        return redirect()->route('admin.exposants.index')
             ->with('success', 'Exposant modifié avec succès.');
     }
 
@@ -72,8 +50,20 @@ class ExposantController extends Controller
     {
         $exposant->delete();
 
-        return redirect()
-            ->route('admin.exposants.index')
+        return redirect()->route('admin.exposants.index')
             ->with('success', 'Exposant supprimé avec succès.');
+    }
+
+    private function validateExposant(Request $request): array
+    {
+        return $request->validate([
+            'tag_id' => ['required', 'exists:tags,id'],
+            'nom' => ['required', 'string', 'max:255'],
+            'description' => ['required', 'string'],
+            'activite' => ['required', 'string'],
+            'logo' => ['nullable', 'string', 'max:2048'],
+            'site_web' => ['nullable', 'url', 'max:2048'],
+            'reseaux' => ['nullable', 'url', 'max:2048'],
+        ]);
     }
 }
