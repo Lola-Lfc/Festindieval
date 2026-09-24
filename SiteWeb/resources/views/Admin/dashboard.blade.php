@@ -32,11 +32,11 @@
             <span>Gérer les séries</span>
         </a>
 
-        <div class="stat-card disabled">
+        <a href="{{ route('admin.tags.index') }}" class="stat-card">
             <h2>Tags</h2>
             <strong>{{ $tagsCount }}</strong>
             <span>Gérer les tags</span>
-        </div>
+        </a>
 
         <div class="stat-card disabled">
             <h2>Types de billets</h2>

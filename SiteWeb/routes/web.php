@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 // Import Controllers Admin
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Admin\SeriesController as AdminSeriesController;
+use App\Http\Controllers\Admin\ExposantController as AdminExposantController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -75,6 +78,20 @@ Route::prefix('admin')
             ->name('series.update');
         Route::delete('/series/{serie}', [AdminSeriesController::class, 'destroy'])
             ->name('series.destroy');
+
+    //Panel Admin Tags
+        Route::get('/tags', [TagController::class, 'index'])
+            ->name('tags.index');
+        Route::get('/tags/create', [TagController::class, 'create'])
+            ->name('tags.create');
+        Route::post('/tags', [TagController::class, 'store'])
+            ->name('tags.store');
+        Route::get('/tags/{tag}/edit', [TagController::class, 'edit'])
+            ->name('tags.edit');
+        Route::put('/tags/{tag}', [TagController::class, 'update'])
+            ->name('tags.update');
+        Route::delete('/tags/{tag}', [TagController::class, 'destroy'])
+            ->name('tags.destroy');
     });
 
 Route::get('/invite', [InviteController::class, 'index']);
