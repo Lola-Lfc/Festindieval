@@ -38,11 +38,11 @@
             <span>Gérer les tags</span>
         </a>
 
-        <div class="stat-card disabled">
+        <a href="{{ route('admin.typebillets.index') }}" class="stat-card">
             <h2>Types de billets</h2>
             <strong>{{ $typebilletsCount }}</strong>
             <span>Gérer les types de billets</span>
-        </div>
+        </a>
 
         <div class="stat-card disabled">
             <h2>Programmes</h2>

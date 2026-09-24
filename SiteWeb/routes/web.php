@@ -7,10 +7,6 @@ use App\Http\Controllers\ProgrammeController;
 use App\Http\Controllers\SeriesController;
 use App\Http\Controllers\BilleterieController;
 use App\Http\Controllers\ExposantsController;
-use App\Http\Controllers\Admin\SeriesController as AdminSeriesController;
-use App\Http\Controllers\Admin\ExposantController as AdminExposantController;
-use App\Http\Controllers\Admin\InviteController as AdminInviteController;
-use App\Http\Controllers\Admin\ProgrammeController as AdminProgrammeController;
 
 // Import Illuminate
 use Illuminate\Support\Facades\Route;
@@ -19,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Admin\TypebilletController;
+use App\Http\Controllers\Admin\SeriesController as AdminSeriesController;
+use App\Http\Controllers\Admin\ExposantController as AdminExposantController;
+use App\Http\Controllers\Admin\InviteController as AdminInviteController;
+use App\Http\Controllers\Admin\ProgrammeController as AdminProgrammeController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -90,6 +91,20 @@ Route::prefix('admin')
             ->name('tags.update');
         Route::delete('/tags/{tag}', [TagController::class, 'destroy'])
             ->name('tags.destroy');
+
+    //Panel Admin Type Billets
+        Route::get('/typebillets', [TypebilletController::class, 'index'])
+            ->name('typebillets.index');
+        Route::get('/typebillets/create', [TypebilletController::class, 'create'])
+            ->name('typebillets.create');
+        Route::post('/typebillets', [TypebilletController::class, 'store'])
+            ->name('typebillets.store');
+        Route::get('/typebillets/{typebillet}/edit', [TypebilletController::class, 'edit'])
+            ->name('typebillets.edit');
+        Route::put('/typebillets/{typebillet}', [TypebilletController::class, 'update'])
+            ->name('typebillets.update');
+        Route::delete('/typebillets/{typebillet}', [TypebilletController::class, 'destroy'])
+            ->name('typebillets.destroy');
     });
 
 Route::get('/invite', [InviteController::class, 'index']);
