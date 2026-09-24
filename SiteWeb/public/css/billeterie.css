@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+
+.billets-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.billet-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.billet-card h2 {
+    margin-top: 0;
+}
+
+.prix {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.description {
+    line-height: 1.4;
+    flex: 1;
+}
+
+.billet-card button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .billets-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .billets-container {
+        grid-template-columns: 1fr;
+    }
+}
