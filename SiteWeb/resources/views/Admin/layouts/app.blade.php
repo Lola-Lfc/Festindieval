@@ -120,9 +120,9 @@
 
                 <div class="footer-links">
 
-                    <a href="#">Endroit</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Parc+des+Expositions+de+Bordeaux%2C+Cours+Jules+Ladoumegue%2C+33300+Bordeaux" target="_blank" rel="noopener">Endroit</a>
 
-                    <a href="#" class="map-btn">Carte Maps 📍</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Parc+des+Expositions+de+Bordeaux%2C+Cours+Jules+Ladoumegue%2C+33300+Bordeaux" target="_blank" rel="noopener" class="map-btn">Carte Maps 📍</a>
 
                 </div>
 
