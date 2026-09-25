@@ -107,18 +107,32 @@ body {
     color: #000000;
 }
 
-button,
-.filtre,
 .reseaux a {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
-    background: #ffffff !important;
-    color: #000000 !important;
-    border-radius: 0 !important;
+    background: #000000 !important;
+    color: #ffffff !important;
+    border-radius: 5px !important;
 }
 
-.filtre.actif,
+.filtres .filtre {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    padding: 8px 16px;
+    border: 1px solid #000000 !important;
+    border-radius: 999px !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    cursor: pointer;
+    font: inherit;
+}
+
+.filtres .filtre:hover,
+.filtres .filtre:focus-visible,
+.filtres .filtre.actif,
 .reseaux a {
     background: #000000 !important;
     color: #ffffff !important;

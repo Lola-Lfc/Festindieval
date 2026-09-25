@@ -135,12 +135,18 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    overflow: hidden;
+    border-radius: 999px;
 }
 
 /* Bouton déconnexion */
 
 .logout-btn {
     width: 100%;
+    padding: 0 18px;
+    border: 1px solid #000000;
+    border-radius: 999px;
+    background-color: #ffffff;
     cursor: pointer;
     font-family: Arial, sans-serif;
 }

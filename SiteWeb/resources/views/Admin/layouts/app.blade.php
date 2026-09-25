@@ -20,7 +20,7 @@
 
 </head>
 
-<body>
+<body class="admin-layout">
 
     <header class="floating-header">
 

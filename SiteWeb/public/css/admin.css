@@ -1,3 +1,20 @@
+.admin-layout {
+    background: #e2e8f0;
+    color: #111827;
+}
+
+.admin-layout .admin-dashboard,
+.admin-layout .admin-content,
+.admin-layout .admin-exposants,
+.admin-layout .admin-billets,
+.admin-layout .admin-dons,
+.admin-layout .admin-users,
+.admin-layout .admin-series,
+.admin-layout .admin-tags,
+.admin-layout .admin-typebillets {
+    color: #111827;
+}
+
 .admin-dashboard,
 .admin-content,
 .admin-exposants,
@@ -105,6 +122,7 @@ a.stat-card:hover {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    color: #111827;
 }
 
 .admin-content th,
@@ -227,7 +245,10 @@ a.stat-card:hover {
 .admin-series textarea,
 .admin-tags input,
 .admin-tags select,
-.admin-tags textarea {
+.admin-tags textarea,
+.admin-typebillets input,
+.admin-typebillets select,
+.admin-typebillets textarea {
     width: 100%;
     box-sizing: border-box;
     padding: 10px;

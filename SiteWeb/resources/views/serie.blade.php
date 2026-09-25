@@ -20,6 +20,10 @@
 @section('content')
 <h1>Séries</h1>
 
+@if (session('success'))
+    <p class="don-success">{{ session('success') }}</p>
+@endif
+
 <div class="series-container">
 
     @foreach ($series as $serie)
