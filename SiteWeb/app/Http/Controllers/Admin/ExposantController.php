@@ -25,7 +25,18 @@ class ExposantController extends Controller
 
     public function store(Request $request)
     {
-        Exposant::create($this->validateExposant($request));
+        $validated = $this->validateExposant($request);
+
+        if ($request->hasFile('logo')) {
+            $file = $request->file('logo');
+            $filename = uniqid() . '.' . $file->getClientOriginalExtension();
+
+            $file->move(public_path('images'), $filename);
+
+            $validated['logo'] = '/images/' . $filename;
+        }
+
+        Exposant::create($validated);
 
         return redirect()->route('admin.exposants.index')
             ->with('success', 'Exposant créé avec succès.');
@@ -40,7 +51,20 @@ class ExposantController extends Controller
 
     public function update(Request $request, Exposant $exposant)
     {
-        $exposant->update($this->validateExposant($request));
+        $validated = $this->validateExposant($request);
+
+        if ($request->hasFile('logo')) {
+            $file = $request->file('logo');
+            $filename = uniqid() . '.' . $file->getClientOriginalExtension();
+
+            $file->move(public_path('images'), $filename);
+
+            $validated['logo'] = '/images/' . $filename;
+        } else {
+            unset($validated['logo']);
+        }
+
+        $exposant->update($validated);
 
         return redirect()->route('admin.exposants.index')
             ->with('success', 'Exposant modifié avec succès.');
@@ -61,7 +85,7 @@ class ExposantController extends Controller
             'nom' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
             'activite' => ['required', 'string'],
-            'logo' => ['nullable', 'string', 'max:2048'],
+            'logo' => ['nullable', 'image', 'mimes:jpeg,jpg,png,webp', 'max:5120'],
             'site_web' => ['nullable', 'url', 'max:2048'],
             'reseaux' => ['nullable', 'url', 'max:2048'],
         ]);

@@ -14,7 +14,7 @@
     </ul>
 @endif
 
-<form method="POST" action="{{ route('admin.exposants.store') }}">
+<form method="POST" action="{{ route('admin.exposants.store') }}" enctype="multipart/form-data">
     @csrf
 
     <label for="nom">Nom</label>
@@ -36,7 +36,7 @@
     </select>
 
     <label for="logo">Logo</label>
-    <input type="text" name="logo" id="logo" value="{{ old('logo') }}">
+    <input type="file" name="logo" id="logo" accept="image/jpeg,image/png,image/webp">
 
     <label for="site_web">Site web</label>
     <input type="text" name="site_web" id="site_web" value="{{ old('site_web') }}">

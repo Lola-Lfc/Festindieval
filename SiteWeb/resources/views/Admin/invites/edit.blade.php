@@ -12,7 +12,7 @@
         </ul>
     @endif
 
-    <form method="POST" action="{{ route('admin.invites.update', $invite) }}">
+    <form method="POST" action="{{ route('admin.invites.update', $invite) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
@@ -35,7 +35,11 @@
         </select>
 
         <label for="pfp">Photo de profil</label>
-        <input id="pfp" name="pfp" type="text" value="{{ old('pfp', $invite->pfp) }}">
+        @if ($invite->pfp)
+            <img src="{{ asset($invite->pfp) }}" alt="{{ $invite->nom }}" width="120">
+        @endif
+        <input id="pfp" name="pfp" type="file" accept="image/jpeg,image/png,image/webp">
+        <small>Laisser vide pour conserver l'image actuelle.</small>
 
         <label for="youtube">YouTube</label>
         <input id="youtube" name="youtube" type="url" value="{{ old('youtube', $invite->youtube) }}">

@@ -12,7 +12,7 @@
         </ul>
     @endif
 
-    <form method="POST" action="{{ route('admin.invites.store') }}">
+    <form method="POST" action="{{ route('admin.invites.store') }}" enctype="multipart/form-data">
         @csrf
 
         <label for="nom">Nom</label>
@@ -34,7 +34,7 @@
         </select>
 
         <label for="pfp">Photo de profil</label>
-        <input id="pfp" name="pfp" type="text" value="{{ old('pfp') }}">
+        <input id="pfp" name="pfp" type="file" accept="image/jpeg,image/png,image/webp">
 
         <label for="youtube">YouTube</label>
         <input id="youtube" name="youtube" type="url" value="{{ old('youtube') }}">

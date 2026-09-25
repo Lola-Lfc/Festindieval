@@ -27,6 +27,15 @@ class InviteController extends Controller
     {
         $validated = $this->validateInvite($request);
 
+        if ($request->hasFile('pfp')) {
+            $file = $request->file('pfp');
+            $filename = uniqid() . '.' . $file->getClientOriginalExtension();
+
+            $file->move(public_path('images'), $filename);
+
+            $validated['pfp'] = '/images/' . $filename;
+        }
+
         Invite::create($validated);
 
         return redirect()
@@ -43,7 +52,20 @@ class InviteController extends Controller
 
     public function update(Request $request, Invite $invite)
     {
-        $invite->update($this->validateInvite($request));
+        $validated = $this->validateInvite($request);
+
+        if ($request->hasFile('pfp')) {
+            $file = $request->file('pfp');
+            $filename = uniqid() . '.' . $file->getClientOriginalExtension();
+
+            $file->move(public_path('images'), $filename);
+
+            $validated['pfp'] = '/images/' . $filename;
+        } else {
+            unset($validated['pfp']);
+        }
+
+        $invite->update($validated);
 
         return redirect()
             ->route('admin.invites.index')
@@ -71,7 +93,7 @@ class InviteController extends Controller
             'tag_id' => ['required', 'exists:tags,id'],
             'nom' => ['required', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
-            'pfp' => ['nullable', 'string', 'max:2048'],
+            'pfp' => ['nullable', 'image', 'mimes:jpeg,jpg,png,webp', 'max:5120'],
             'activite' => ['required', 'string'],
             'youtube' => ['nullable', 'url', 'max:2048'],
             'instagram' => ['nullable', 'url', 'max:2048'],

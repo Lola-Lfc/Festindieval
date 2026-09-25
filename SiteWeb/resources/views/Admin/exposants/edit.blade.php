@@ -15,7 +15,8 @@
 @endif
 
 <form method="POST"
-      action="{{ route('admin.exposants.update', $exposant) }}">
+    action="{{ route('admin.exposants.update', $exposant) }}"
+    enctype="multipart/form-data">
 
     @csrf
     @method('PUT')
@@ -58,12 +59,16 @@
     </select>
 
     <label for="logo">Logo</label>
+    @if ($exposant->logo)
+        <img src="{{ asset($exposant->logo) }}" alt="{{ $exposant->nom }}" width="120">
+    @endif
     <input
-        type="text"
+        type="file"
         name="logo"
         id="logo"
-        value="{{ old('logo', $exposant->logo) }}"
+        accept="image/jpeg,image/png,image/webp"
     >
+    <small>Laisser vide pour conserver l'image actuelle.</small>
 
     <label for="site_web">Site web</label>
     <input
