@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::updateOrCreate(
-            ['email' => 'admin@festindival.com'],
+            ['email' => 'admin@festindieval.com'],
             [
                 'name' => 'Administrateur',
                 'password' => 'password',

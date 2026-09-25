@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 
-    <title>Festindival</title>
+    <title>Festindieval</title>
 
 </head>
 

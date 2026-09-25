@@ -18,7 +18,7 @@
 
     <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <title>@yield('title', 'Festindival')</title>
+    <title>@yield('title', 'Festindieval')</title>
 
 </head>
 

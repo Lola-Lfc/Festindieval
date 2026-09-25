@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Connexion - Festindival')
+@section('title', 'Connexion - Festindieval')
 
 @section('styles')
     <link rel="stylesheet" href="{{ asset('css/auth.css') }}">

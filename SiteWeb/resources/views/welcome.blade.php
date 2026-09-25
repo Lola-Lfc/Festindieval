@@ -6,7 +6,7 @@
     {{-- Titre principal de la page d'accueil --}}
     <section class="main-section">
         <img src="{{ asset('images/banner.png') }}" alt="baniere" class="main-logo">
-        <h1 class="main-title">FESTINDIVAL</h1>
+        <h1 class="main-title">FESTINDIEVAL</h1>
     </section>
     <section class="event-section">
         <h3 class="rdv-title">RDV DANS :</h3>
