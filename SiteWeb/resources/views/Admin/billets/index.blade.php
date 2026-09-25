@@ -63,6 +63,7 @@
                                 @method('DELETE')
 
                                 <button
+                                    class="danger-button"
                                     type="submit"
                                     onclick="return confirm('Voulez-vous vraiment rembourser ce billet ?')"
                                 >

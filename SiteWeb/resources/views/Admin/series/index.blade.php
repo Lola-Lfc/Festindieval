@@ -69,7 +69,7 @@
                             @csrf
                             @method('DELETE')
 
-                            <button type="submit" onclick="return confirm('Supprimer cette série ?')">
+                            <button class="danger-button" type="submit" onclick="return confirm('Supprimer cette série ?')">
                                 Supprimer
                             </button>
                         </form>

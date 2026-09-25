@@ -47,7 +47,7 @@
                             @csrf
                             @method('DELETE')
 
-                            <button type="submit" onclick="return confirm('Supprimer ce type de billet ?')">
+                            <button class="danger-button" type="submit" onclick="return confirm('Supprimer ce type de billet ?')">
                                 Supprimer
                             </button>
                         </form>

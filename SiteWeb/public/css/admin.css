@@ -160,7 +160,10 @@ a.stat-card:hover {
 .admin-tags button,
 .admin-typebillets button {
     display: inline-block;
-    padding: 8px 12px;
+    margin: 2px 6px 2px 0;
+    padding: 9px 14px;
+    line-height: 1.2;
+    vertical-align: middle;
     border: 1px solid #111;
     border-radius: 6px;
     background: white;
@@ -188,6 +191,44 @@ a.stat-card:hover {
 .admin-typebillets button:hover {
     background: #111;
     color: white;
+}
+
+.admin-content .danger-button,
+.admin-exposants .danger-button,
+.admin-billets .danger-button,
+.admin-dons .danger-button,
+.admin-users .danger-button,
+.admin-series .danger-button,
+.admin-tags .danger-button,
+.admin-typebillets .danger-button {
+    border-color: #b42318;
+    background: #dc2626;
+    color: #ffffff;
+}
+
+.admin-content .danger-button:hover,
+.admin-exposants .danger-button:hover,
+.admin-billets .danger-button:hover,
+.admin-dons .danger-button:hover,
+.admin-users .danger-button:hover,
+.admin-series .danger-button:hover,
+.admin-tags .danger-button:hover,
+.admin-typebillets .danger-button:hover {
+    border-color: #991b1b;
+    background: #991b1b;
+    color: #ffffff;
+}
+
+.admin-content table form,
+.admin-exposants table form,
+.admin-billets table form,
+.admin-dons table form,
+.admin-users table form,
+.admin-series table form,
+.admin-tags table form,
+.admin-typebillets table form {
+    display: inline;
+    margin: 0;
 }
 
 .admin-content form,

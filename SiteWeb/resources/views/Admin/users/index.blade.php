@@ -59,6 +59,7 @@
                             @method('DELETE')
 
                             <button
+                                class="danger-button"
                                 type="submit"
                                 onclick="return confirm('Supprimer cet utilisateur ?')"
                             >

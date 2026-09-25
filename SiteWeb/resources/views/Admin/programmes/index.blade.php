@@ -32,7 +32,7 @@
                         <form method="POST" action="{{ route('admin.programmes.destroy', $programme) }}" style="display: inline;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" onclick="return confirm('Supprimer cet événement ?')">Supprimer</button>
+                            <button class="danger-button" type="submit" onclick="return confirm('Supprimer cet événement ?')">Supprimer</button>
                         </form>
                     </td>
                 </tr>

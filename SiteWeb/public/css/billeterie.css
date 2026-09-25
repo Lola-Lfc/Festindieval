@@ -194,8 +194,48 @@ h1,
 }
 
 .purchase-dialog .purchase-cancel {
+    background: #111827;
+    color: #ffffff;
+}
+
+.purchase-dialog form > button {
+    width: 100%;
+    margin-top: 0;
+    padding: 10px 14px;
+    border: 1px solid #111827;
+    border-radius: 999px;
+    background: #111827;
+    color: #ffffff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+.purchase-dialog form > button:hover {
     background: #ffffff;
     color: #111827;
+}
+
+.billetterie-page .billet-card button,
+.billetterie-page .billet-card button:hover,
+.billetterie-page .purchase-dialog button,
+.billetterie-page .purchase-dialog button:hover {
+    background: #000000 !important;
+    border: 1px solid #000000 !important;
+    border-radius: 999px !important;
+    color: #ffffff !important;
+}
+
+.billet-card .purchase-open {
+    background: #000000 !important;
+    border-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+.billet-card .purchase-open:hover {
+    background: #ffffff !important;
+    border-color: #000000 !important;
+    color: #000000 !important;
 }
 
 @media (max-width: 600px) {

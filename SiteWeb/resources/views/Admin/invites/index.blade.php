@@ -34,7 +34,7 @@
                         <form method="POST" action="{{ route('admin.invites.destroy', $invite) }}" style="display: inline;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" onclick="return confirm('Supprimer cet invité ?')">Supprimer</button>
+                            <button class="danger-button" type="submit" onclick="return confirm('Supprimer cet invité ?')">Supprimer</button>
                         </form>
                     </td>
                 </tr>
