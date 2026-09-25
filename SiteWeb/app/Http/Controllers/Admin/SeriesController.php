@@ -30,7 +30,12 @@ class SeriesController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $validated['image'] = $request->file('image')->store('series', 'public');
+            $file = $request->file('image');
+            $filename = uniqid() . '.' . $file->getClientOriginalExtension();
+
+            $file->move(public_path('images'), $filename);
+
+            $validated['image'] = '/images/' . $filename;
         }
 
         Seriesindee::create($validated);
@@ -55,7 +60,12 @@ class SeriesController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $validated['image'] = $request->file('image')->store('series', 'public');
+            $file = $request->file('image');
+            $filename = uniqid() . '.' . $file->getClientOriginalExtension();
+
+            $file->move(public_path('images'), $filename);
+
+            $validated['image'] = '/images/' . $filename;
         } else {
             unset($validated['image']);
         }
