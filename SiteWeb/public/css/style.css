@@ -645,8 +645,8 @@ body:has(.event-section) .edition-section .title-pink {
 
 body:has(.event-section) .event-section .countdown-item .number,
 body:has(.event-section) .event-section .countdown-item .label {
-    color: #000000 !important;
-    -webkit-text-fill-color: #000000;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
     -webkit-text-stroke: 6px #ffffff;
     text-shadow: 0 0 1px #ffffff;
     paint-order: stroke fill;
