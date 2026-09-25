@@ -176,6 +176,8 @@ body:has(.event-section) .footer-container {
 .partner-logos img {
     width: 70px;
     height: 70px;
+    flex: 0 0 70px;
+    box-sizing: border-box;
     object-fit: contain;
     border: 2px solid #000000;
     border-radius: 12px;

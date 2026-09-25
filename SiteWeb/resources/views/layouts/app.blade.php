@@ -114,11 +114,11 @@
 
                 <div class="partner-logos">
 
-                    <img src="{{ asset('images/logo-1.png') }}" alt="Logo partenaire 1">
+                    <img src="{{ asset('images/logo-anim-france.svg') }}" alt="Anim France">
 
-                    <img src="{{ asset('images/logo-2.png') }}" alt="Logo partenaire 2">
+                    <img src="{{ asset('images/logo-cnc.svg') }}" alt="CNC">
 
-                    <img src="{{ asset('images/logo-3.png') }}" alt="Logo partenaire 3">
+                    <img src="{{ asset('images/logo-arte.svg') }}" alt="arte">
 
                 </div>
 
