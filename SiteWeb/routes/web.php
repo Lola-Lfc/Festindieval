@@ -36,6 +36,9 @@ Route::get('/login', [AuthController::class, 'showLogin'])
 Route::post('/login', [AuthController::class, 'login'])
     ->name('login.store');
 
+Route::post('/register', [AuthController::class, 'register'])
+    ->name('register.store');
+
 Route::post('/logout', [AuthController::class, 'logout'])
     ->middleware('auth')
     ->name('logout');
@@ -124,7 +127,12 @@ Route::get('/invite', [InviteController::class, 'index']);
 
 Route::get('/series', [SeriesController::class, 'index']);
 
-Route::get('/billeterie', [BilleterieController::class, 'index']);
+Route::get('/billeterie', [BilleterieController::class, 'index'])
+    ->name('billeterie');
+
+Route::post('/billeterie/{typebillet}/acheter', [BilleterieController::class, 'purchase'])
+    ->middleware('auth')
+    ->name('billeterie.purchase');
 
 Route::get('/exposants', [ExposantsController::class, 'index']);
 
