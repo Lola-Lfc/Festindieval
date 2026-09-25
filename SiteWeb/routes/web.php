@@ -7,6 +7,7 @@ use App\Http\Controllers\ProgrammeController;
 use App\Http\Controllers\SeriesController;
 use App\Http\Controllers\BilleterieController;
 use App\Http\Controllers\ExposantsController;
+use App\Http\Controllers\DonsController;
 
 // Import Illuminate
 use Illuminate\Support\Facades\Route;
@@ -126,3 +127,7 @@ Route::get('/series', [SeriesController::class, 'index']);
 Route::get('/billeterie', [BilleterieController::class, 'index']);
 
 Route::get('/exposants', [ExposantsController::class, 'index']);
+
+Route::post('/series/{serie}/don', [DonsController::class, 'store'])
+    ->middleware('auth')
+    ->name('series.don');
