@@ -16,6 +16,7 @@ body {
 }
 
 .jour > h2 {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 15px;
     background: #222;
@@ -38,6 +39,7 @@ body {
 }
 
 .evenement h3 {
+    font-family: Arial, sans-serif;
     margin: 0 0 8px;
 }
 
@@ -55,4 +57,32 @@ body {
     .calendrier {
         grid-template-columns: 1fr;
     }
+}
+
+body {
+    background: #000000;
+    color: #ffffff;
+}
+
+.jour {
+    border: 2px solid #ffffff;
+    background: #3f3f3f;
+}
+
+.jour > h2 {
+    background: #000000;
+}
+
+.evenement {
+    border-bottom-color: #ffffff;
+}
+
+h1,
+.jour h2,
+.evenement h3,
+.evenement p,
+.evenement .horaire {
+    color: #000000;
+    -webkit-text-stroke: 1px #ffffff;
+    paint-order: stroke fill;
 }

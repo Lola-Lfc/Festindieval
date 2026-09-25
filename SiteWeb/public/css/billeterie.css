@@ -18,6 +18,7 @@ body {
 }
 
 .billet-card h2 {
+    font-family: Arial, sans-serif;
     margin-top: 0;
 }
 
@@ -51,4 +52,29 @@ body {
     .billets-container {
         grid-template-columns: 1fr;
     }
+}
+
+body {
+    background: #000000;
+    color: #ffffff;
+}
+
+.billet-card {
+    border: 2px solid #ffffff;
+    background: #3f3f3f;
+}
+
+.billet-card button {
+    background: #000000;
+    border: 2px solid #ffffff;
+}
+
+h1,
+.billet-card h2,
+.billet-card p,
+.billet-card button,
+.prix {
+    color: #000000;
+    -webkit-text-stroke: 1px #ffffff;
+    paint-order: stroke fill;
 }

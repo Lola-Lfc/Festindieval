@@ -50,6 +50,7 @@ body {
 }
 
 .exposant-content h2 {
+    font-family: Arial, sans-serif;
     margin-top: 0;
     margin-bottom: 5px;
 }
@@ -99,4 +100,40 @@ body {
     .exposants-container {
         grid-template-columns: 1fr;
     }
+}
+
+body {
+    background: #000000;
+    color: #ffffff;
+}
+
+.filtre {
+    border: 2px solid #ffffff;
+    background: #3f3f3f;
+    color: #ffffff;
+}
+
+.filtre.actif,
+.liens a {
+    background: #000000;
+    color: #ffffff;
+}
+
+.exposant-card {
+    border: 2px solid #ffffff;
+    background: #3f3f3f;
+}
+
+.description {
+    border-top-color: #ffffff;
+}
+
+h1,
+.filtres button,
+.exposant-content h2,
+.exposant-content p,
+.exposant-content a {
+    color: #000000;
+    -webkit-text-stroke: 1px #ffffff;
+    paint-order: stroke fill;
 }

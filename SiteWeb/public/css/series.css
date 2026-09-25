@@ -31,6 +31,7 @@ body {
 }
 
 .serie-content h2 {
+    font-family: Arial, sans-serif;
     margin-top: 0;
 }
 
@@ -64,4 +65,28 @@ body {
     .series-container {
         grid-template-columns: 1fr;
     }
+}
+
+body {
+    background: #000000;
+    color: #ffffff;
+}
+
+.serie-card {
+    border: 2px solid #ffffff;
+    background: #3f3f3f;
+}
+
+.serie-content a {
+    background: #000000;
+    border: 2px solid #ffffff;
+}
+
+h1,
+.serie-content h2,
+.serie-content p,
+.serie-content a {
+    color: #000000;
+    -webkit-text-stroke: 1px #ffffff;
+    paint-order: stroke fill;
 }

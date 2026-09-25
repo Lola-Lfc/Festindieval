@@ -1,0 +1,761 @@
+/* ==========================================
+   STYLE GLOBAL & FOND BLANC CASSÉ
+   ========================================== */
+body {
+    margin: 0;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* Bannière principale de l'accueil */
+.main-section {
+    width: min(1100px, calc(100% - 40px));
+    min-height: 190px;
+    margin: 24px auto 0;
+    padding: 28px 40px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 18px;
+    box-shadow: 4px 6px 0 #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+}
+
+.main-logo {
+    display: block;
+    width: min(260px, 42vw);
+    max-height: 130px;
+    object-fit: contain;
+}
+
+.main-title {
+    margin: 0;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: clamp(28px, 5vw, 58px);
+    line-height: 1;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 1px #ffffff;
+}
+
+/* ==========================================
+   1. SECTION EVENEMENT & COMPTE À REBOURS
+   ========================================== */
+.event-section {
+    background-color: #000000;
+    padding: 60px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Titre supérieur */
+.rdv-title {
+    align-self: flex-start;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto 25px auto;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+}
+
+/* Compte à rebours */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    max-width: 1100px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 110px;
+}
+
+.countdown-item .number,
+.countdown-item .label {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.countdown-item .number {
+    font-size: 64px;
+    margin-bottom: 6px;
+    letter-spacing: -1px;
+}
+
+.countdown-item .label {
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #d9d9d9;
+}
+
+/* Cartes d'informations principales */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.info-card {
+    background-color: #ffffff;
+    border: 2px solid #1a1a1a;
+    border-radius: 24px;
+    padding: 28px 24px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    box-shadow: 4px 6px 0px #1a1a1a; /* Aspect sticker moderne */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 9px 0px #1a1a1a;
+}
+
+.card-title {
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Couleurs vives des titres de cartes */
+.title-blue { color: #161d4e; }
+.title-red  { color: #1024C1; }
+.title-green{ color: #1F38ED; }
+.title-pink { color: #75a0f2; }
+
+.card-content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.price-value {
+    color: #1a1a1a;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+/* ==========================================
+   2. SECTION PREMIÈRE ÉDITION
+   ========================================== */
+.edition-section {
+    background-color: #000000;
+    padding: 40px 8px 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Titre de section */
+.edition-title {
+    font-family: Arial, sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0 0 50px 0;
+    text-align: center;
+    color: #000000;
+    -webkit-text-stroke: 2px #ffffff;
+    text-shadow: 0 0 1px #ffffff;
+}
+
+/* Grille : 1 grande (2fr) + 2 standard (1fr) */
+.edition-cards-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 28px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.edition-card {
+    background-color: #ffffff;
+    border: 2px solid #1a1a1a;
+    border-radius: 28px;
+    padding: 32px 24px 50px 24px;
+    min-height: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 4px 6px 0px #1a1a1a;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.edition-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 9px 0px #1a1a1a;
+}
+
+.edition-card .card-title {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    letter-spacing: 1px;
+}
+
+.card-body {
+    width: 100%;
+    flex-grow: 1;
+}
+
+/* Boutons "VOIR PLUS" */
+.btn-voir-plus {
+    position: absolute;
+    bottom: -22px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 12px 32px;
+    border-radius: 50px;
+    border: 2px solid #1a1a1a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.btn-voir-plus:hover {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   RESPONSIVE (Mobiles & Tablettes)
+   ========================================== */
+@media (max-width: 900px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .edition-cards-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .countdown-container {
+        gap: 24px;
+    }
+
+    .countdown-item .number { font-size: 48px; }
+    .countdown-item .label { font-size: 20px; }
+
+    .edition-title {
+        font-size: 30px;
+    }
+
+    .edition-card {
+        min-height: 360px;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-section {
+        min-height: 150px;
+        margin-top: 16px;
+        padding: 22px 18px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .main-logo {
+        width: min(220px, 70vw);
+        max-height: 80px;
+    }
+
+    .main-title {
+        font-size: 30px;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Compte à rebours : remplissage noir et contour blanc */
+.countdown-item .number,
+.countdown-item .label {
+    color: #000000;
+    -webkit-text-stroke: 1px #ffffff;
+    text-shadow: 0 0 1px #ffffff;
+}
+
+/* Thème noir commun aux sections de l'accueil */
+body {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.event-section {
+    background-color: #000000;
+}
+
+.rdv-title,
+.countdown-item .number,
+.price-value {
+    color: #ffffff;
+}
+
+.countdown-item .label {
+    color: #cbd5e1;
+}
+
+.info-card,
+.edition-card {
+    background-color: #000000;
+    border-color: #ffffff;
+    box-shadow: 4px 6px 0 #ffffff;
+}
+
+.info-card:hover,
+.edition-card:hover {
+    box-shadow: 6px 9px 0 #ffffff;
+}
+
+.title-blue { color: #00aaff; }
+.title-red { color: #ff3030; }
+.title-green { color: #c8ff00; }
+.title-pink { color: #ff00cc; }
+
+.btn-voir-plus {
+    background-color: #000000;
+    border-color: #ffffff;
+}
+
+/* Texte noir avec contour blanc */
+.event-section h3,
+.event-section h4,
+.event-section p,
+.event-section span,
+.edition-section h2,
+.edition-section h3,
+.edition-section p,
+.edition-section span,
+.edition-section a {
+    color: #000000;
+    -webkit-text-stroke: 1px #ffffff;
+    paint-order: stroke fill;
+}
+
+.event-section .countdown-item .label {
+    color: #000000;
+}
+
+/* Priorité finale pour le compte à rebours */
+.event-section .countdown-item .number,
+.event-section .countdown-item .label {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000;
+    -webkit-text-stroke: 1.5px #ffffff;
+    text-shadow: 0 0 1px #ffffff;
+    paint-order: stroke fill;
+}
+
+.event-section .title-blue,
+.event-section .title-red,
+.event-section .title-green,
+.event-section .title-pink,
+.edition-section .title-blue,
+.edition-section .title-red,
+.edition-section .title-green,
+.edition-section .title-pink {
+    color: #000000;
+}
+
+/* Espacements resserrés uniquement sur l'accueil */
+body:has(.event-section) {
+    padding-top: 86px;
+}
+
+body:has(.event-section) .event-section {
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+body:has(.event-section) .rdv-title {
+    margin-bottom: 12px;
+}
+
+body:has(.event-section) .countdown-container {
+    gap: 34px;
+    margin-bottom: 28px;
+}
+
+/* Les deux sections noires occupent toute la largeur de la fenêtre */
+body:has(.event-section) {
+    overflow-x: hidden;
+}
+
+body:has(.event-section) .event-section,
+body:has(.event-section) .edition-section {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+body:has(.event-section) .rdv-title,
+body:has(.event-section) .countdown-container,
+body:has(.event-section) .cards-container,
+body:has(.event-section) .edition-cards-container {
+    max-width: 1400px;
+}
+
+/* Finitions visuelles de l'index uniquement */
+body:has(.event-section) .event-section,
+body:has(.event-section) .edition-section {
+    padding-left: clamp(18px, 3vw, 48px);
+    padding-right: clamp(18px, 3vw, 48px);
+}
+
+body:has(.event-section) .countdown-container {
+    align-items: end;
+    gap: clamp(18px, 4vw, 64px);
+    padding-bottom: 26px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+body:has(.event-section) .countdown-item {
+    min-width: 96px;
+    padding: 8px 14px;
+}
+
+body:has(.event-section) .cards-container,
+body:has(.event-section) .edition-cards-container {
+    gap: clamp(14px, 2vw, 26px);
+}
+
+body:has(.event-section) .info-card,
+body:has(.event-section) .edition-card {
+    background: #000000;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+body:has(.event-section) .info-card:hover,
+body:has(.event-section) .edition-card:hover {
+    transform: translateY(-4px);
+}
+
+body:has(.event-section) .edition-title {
+    margin-bottom: 34px;
+}
+
+body:has(.event-section) .edition-card .card-title {
+    margin-bottom: 26px;
+}
+
+@media (max-width: 700px) {
+    body:has(.event-section) .countdown-container {
+        gap: 8px;
+        padding-bottom: 20px;
+    }
+
+    body:has(.event-section) .countdown-item {
+        min-width: 64px;
+        padding: 6px 4px;
+    }
+}
+
+/* DA du header/footer appliquee a l'index uniquement */
+body:has(.event-section) .event-section,
+body:has(.event-section) .edition-section {
+    position: relative;
+    isolation: isolate;
+}
+
+body:has(.event-section) .event-section::before,
+body:has(.event-section) .edition-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+    background-size: 18px 18px;
+    opacity: 0.35;
+}
+
+body:has(.event-section) .rdv-title,
+body:has(.event-section) .edition-title {
+    width: min(1400px, 100%);
+    box-sizing: border-box;
+    padding: 0 4px;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+body:has(.event-section) .rdv-title {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+body:has(.event-section) .edition-title {
+    font-size: clamp(24px, 3.2vw, 42px);
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+body:has(.event-section) .card-title {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1.15;
+}
+
+body:has(.event-section) .countdown-item .number {
+    font-family: Arial, sans-serif;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+body:has(.event-section) .countdown-item .label {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+body:has(.event-section) .price-value {
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+body:has(.event-section) .countdown-item {
+    border-radius: 999px;
+}
+
+body:has(.event-section) .info-card,
+body:has(.event-section) .edition-card {
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 3px 4px 0 rgba(255, 255, 255, 0.9);
+}
+
+body:has(.event-section) .info-card:hover,
+body:has(.event-section) .edition-card:hover {
+    box-shadow: 5px 6px 0 rgba(255, 255, 255, 0.9);
+}
+
+body:has(.event-section) .btn-voir-plus {
+    border-radius: 999px;
+    box-shadow: 2px 3px 0 rgba(255, 255, 255, 0.9);
+}
+
+body:has(.event-section) .edition-card .card-body {
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+    padding-top: 18px;
+}
+
+/* Bordures fines dans les sections de l'accueil */
+body:has(.event-section) .info-card,
+body:has(.event-section) .edition-card {
+    border-width: 1px;
+    border-radius: 42px;
+    box-shadow: 2px 3px 0 #ffffff;
+}
+
+/* Dans les sections noires, seul le timer garde un contour */
+body:has(.event-section) .event-section h3,
+body:has(.event-section) .event-section h4,
+body:has(.event-section) .event-section p,
+body:has(.event-section) .event-section span,
+body:has(.event-section) .edition-section h2,
+body:has(.event-section) .edition-section h3,
+body:has(.event-section) .edition-section p,
+body:has(.event-section) .edition-section span,
+body:has(.event-section) .edition-section a {
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+    -webkit-text-stroke: 0;
+    text-shadow: none;
+}
+
+body:has(.event-section) .event-section .title-blue,
+body:has(.event-section) .event-section .title-red,
+body:has(.event-section) .event-section .title-green,
+body:has(.event-section) .event-section .title-pink,
+body:has(.event-section) .edition-section .title-blue,
+body:has(.event-section) .edition-section .title-red,
+body:has(.event-section) .edition-section .title-green,
+body:has(.event-section) .edition-section .title-pink {
+    -webkit-text-fill-color: #60a5fa;
+    color: #60a5fa;
+}
+
+body:has(.event-section) .event-section .title-red,
+body:has(.event-section) .edition-section .title-red {
+    -webkit-text-fill-color: #38bdf8;
+    color: #38bdf8;
+}
+
+body:has(.event-section) .event-section .title-green,
+body:has(.event-section) .edition-section .title-green {
+    -webkit-text-fill-color: #2563eb;
+    color: #2563eb;
+}
+
+body:has(.event-section) .event-section .title-pink,
+body:has(.event-section) .edition-section .title-pink {
+    -webkit-text-fill-color: #93c5fd;
+    color: #93c5fd;
+}
+
+body:has(.event-section) .event-section .countdown-item .number,
+body:has(.event-section) .event-section .countdown-item .label {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000;
+    -webkit-text-stroke: 1.5px #ffffff;
+    text-shadow: 0 0 1px #ffffff;
+    paint-order: stroke fill;
+}
+
+/* Typographie minimaliste de l'index */
+body:has(.event-section) .main-title {
+    font-size: clamp(24px, 4vw, 44px);
+    letter-spacing: 0.5px;
+}
+
+body:has(.event-section) .rdv-title {
+    font-size: 13px;
+    letter-spacing: 1.4px;
+}
+
+body:has(.event-section) .countdown-item .number {
+    font-size: 48px;
+    letter-spacing: 0;
+}
+
+body:has(.event-section) .countdown-item .label {
+    font-size: 11px;
+    letter-spacing: 1.4px;
+}
+
+body:has(.event-section) .card-title,
+body:has(.event-section) .edition-card .card-title {
+    font-size: 18px;
+    letter-spacing: 0.4px;
+}
+
+body:has(.event-section) .price-value {
+    font-size: 24px;
+    letter-spacing: 0;
+}
+
+body:has(.event-section) .edition-title {
+    font-size: clamp(20px, 2.6vw, 32px);
+    letter-spacing: 1.2px;
+}
+
+body:has(.event-section) .btn-voir-plus {
+    font-size: 11px;
+    padding: 8px 18px;
+    letter-spacing: 0.6px;
+}
+
+@media (max-width: 700px) {
+    body:has(.event-section) .countdown-item .number {
+        font-size: 34px;
+    }
+
+    body:has(.event-section) .edition-title {
+        font-size: 20px;
+    }
+}
+
+body:has(.event-section) .info-card:hover,
+body:has(.event-section) .edition-card:hover {
+    box-shadow: 3px 4px 0 #ffffff;
+}
+
+body:has(.event-section) .btn-voir-plus {
+    border-width: 1px;
+}
+
+/* Bannière pleine largeur derrière le header */
+body:has(.main-section) .main-section {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    margin: -120px 0 0;
+    padding: 180px 24px 70px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    background: #ffffff;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+body:has(.main-section) .main-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.12);
+    pointer-events: none;
+}
+
+body:has(.main-section) .main-logo {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+}
+
+body:has(.main-section) .main-title {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 500px) {
+    body:has(.main-section) .main-section {
+        min-height: 380px;
+        margin-top: -120px;
+        padding: 155px 18px 45px;
+    }
+}

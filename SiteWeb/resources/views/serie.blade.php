@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -9,7 +10,17 @@
 </head>
 
 <body>
+=======
+@extends('layouts.app')
+>>>>>>> Stashed changes
 
+@section('title', 'Séries')
+
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/series.css') }}">
+@endsection
+
+@section('content')
 <h1>Séries</h1>
 
 <div class="series-container">
@@ -73,7 +84,11 @@
     @endforeach
 
 </div>
+<<<<<<< Updated upstream
 
 </body>
 
 </html>
+=======
+@endsection
+>>>>>>> Stashed changes

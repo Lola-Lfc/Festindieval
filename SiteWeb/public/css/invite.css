@@ -50,6 +50,7 @@ body {
 }
 
 .invite-content h2 {
+    font-family: Arial, sans-serif;
     margin-top: 0;
     margin-bottom: 5px;
 }
@@ -99,4 +100,40 @@ body {
     .invites-container {
         grid-template-columns: 1fr;
     }
+}
+
+body {
+    background: #000000;
+    color: #ffffff;
+}
+
+.filtre {
+    border: 2px solid #ffffff;
+    background: #3f3f3f;
+    color: #ffffff;
+}
+
+.filtre.actif,
+.reseaux a {
+    background: #000000;
+    color: #ffffff;
+}
+
+.invite-card {
+    border: 2px solid #ffffff;
+    background: #3f3f3f;
+}
+
+.description {
+    border-top-color: #ffffff;
+}
+
+h1,
+.filtres button,
+.invite-content h2,
+.invite-content p,
+.invite-content a {
+    color: #000000;
+    -webkit-text-stroke: 1px #ffffff;
+    paint-order: stroke fill;
 }

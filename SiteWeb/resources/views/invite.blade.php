@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Invités</title>
-    <link rel="stylesheet" href="{{ asset('css/invite.css') }}">
-</head>
-<body>
+@extends('layouts.app')
 
+@section('title', 'Invités')
+
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/invite.css') }}">
+@endsection
+
+@section('content')
 <h1>Invités</h1>
 
 <div class="filtres">
@@ -104,6 +104,4 @@
         })
     })
 </script>
-
-</body>
-</html>
+@endsection

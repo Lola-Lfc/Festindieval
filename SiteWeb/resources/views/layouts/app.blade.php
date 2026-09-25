@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
-    <title>Festindival</title>
+    @yield('styles')
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <title>@yield('title', 'Festindival')</title>
 </head>
 <body>
     <header class="floating-header">

@@ -1,4 +1,3 @@
-//
 // Date cible : 6 octobre à 9h00
 const targetDate = new Date("2026-10-06T09:00:00").getTime();
 
@@ -12,8 +11,7 @@ function updateCountdown() {
         return;
     }
 
-    const now = new Date().getTime();
-    const distance = targetDate - now;
+    const distance = targetDate - new Date().getTime();
 
     if (distance < 0) {
         daysElement.innerText = "00";
@@ -23,19 +21,16 @@ function updateCountdown() {
         return;
     }
 
-    // Calculs des jours, heures, minutes et secondes restants
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Formatage sur 2 chiffres minimum (ex: 09)
     daysElement.innerText = String(days).padStart(2, "0");
     hoursElement.innerText = String(hours).padStart(2, "0");
     minutesElement.innerText = String(minutes).padStart(2, "0");
     secondsElement.innerText = String(seconds).padStart(2, "0");
 }
 
-// Lancement immédiat puis mise à jour chaque seconde (1000ms)
 updateCountdown();
 setInterval(updateCountdown, 1000);

@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Programme</title>
-    <link rel="stylesheet" href="{{ asset('css/programme.css') }}">
-</head>
-<body>
+@extends('layouts.app')
 
+@section('title', 'Programme')
+
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/programme.css') }}">
+@endsection
+
+@section('content')
 <h1>Programme</h1>
 
 <div class="calendrier">
@@ -48,6 +48,4 @@
     @endforeach
 
 </div>
-
-</body>
-</html>
+@endsection

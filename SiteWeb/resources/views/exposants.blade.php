@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Exposants</title>
-    <link rel="stylesheet" href="{{ asset('css/exposants.css') }}">
-</head>
-<body>
+@extends('layouts.app')
 
+@section('title', 'Exposants')
+
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/exposants.css') }}">
+@endsection
+
+@section('content')
 <h1>Exposants</h1>
 
 <div class="filtres">
@@ -102,6 +102,4 @@
         })
     })
 </script>
-
-</body>
-</html>
+@endsection

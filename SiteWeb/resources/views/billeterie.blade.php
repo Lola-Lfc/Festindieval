@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Billetterie</title>
-    <link rel="stylesheet" href="{{ asset('css/billeterie.css') }}">
-</head>
-<body>
+@extends('layouts.app')
 
+@section('title', 'Billetterie')
+
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/billeterie.css') }}">
+@endsection
+
+@section('content')
 <h1>Billetterie</h1>
 
 <div class="billets-container">
@@ -32,6 +32,4 @@
     @endforeach
 
 </div>
-
-</body>
-</html>
+@endsection
