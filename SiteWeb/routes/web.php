@@ -8,6 +8,10 @@ use App\Http\Controllers\SeriesController;
 use App\Http\Controllers\BilleterieController;
 use App\Http\Controllers\ExposantsController;
 use App\Http\Controllers\DonsController;
+use App\Models\Exposant;
+use App\Models\Invite;
+use App\Models\Seriesindee;
+use App\Models\Typebillet;
 
 // Import Illuminate
 use Illuminate\Support\Facades\Route;
@@ -25,7 +29,15 @@ use App\Http\Controllers\Admin\InviteController as AdminInviteController;
 use App\Http\Controllers\Admin\ProgrammeController as AdminProgrammeController;
 
 Route::get('/', function () {
-    return view('welcome');
+    $ticketPrices = Typebillet::query()->pluck('prix');
+
+    return view('welcome', [
+        'invites' => Invite::with('tag')->orderBy('nom')->limit(3)->get(),
+        'exposants' => Exposant::with('tag')->orderBy('nom')->limit(3)->get(),
+        'featuredSerie' => Seriesindee::with('dons')->inRandomOrder()->first(),
+        'lowestTicketPrice' => $ticketPrices->min(),
+        'highestTicketPrice' => $ticketPrices->max(),
+    ]);
 });
 
 Route::get('/programme', [ProgrammeController::class, 'index']);

@@ -232,6 +232,45 @@ body {
     flex-grow: 1;
 }
 
+.homepage-person {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 64px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.homepage-person:last-child {
+    margin-bottom: 0;
+}
+
+.homepage-person img {
+    width: 58px;
+    height: 58px;
+    flex: 0 0 58px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.homepage-person-name,
+.homepage-person-tag {
+    margin: 0;
+}
+
+.homepage-person-name {
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.homepage-person-tag {
+    margin-top: 4px;
+    color: #00aaff;
+    font-size: 13px;
+}
+
 /* Boutons "VOIR PLUS" */
 .btn-voir-plus {
     position: absolute;
@@ -577,6 +616,56 @@ body:has(.event-section) .edition-card {
 body:has(.event-section) .info-card:hover,
 body:has(.event-section) .edition-card:hover {
     box-shadow: 5px 6px 0 rgba(255, 255, 255, 0.9);
+}
+
+.edition-section .homepage-person-name,
+.edition-section .homepage-person-tag {
+    -webkit-text-stroke: 0;
+    paint-order: normal;
+}
+
+.edition-section .homepage-person-name {
+    color: #ffffff;
+}
+
+.edition-section .homepage-person-tag {
+    color: #00aaff;
+}
+
+body:has(.event-section) .info-card .card-content {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+}
+
+body:has(.event-section) .info-card .card-content p {
+    margin: 0;
+    line-height: 1.3;
+}
+
+body:has(.event-section) .info-card .card-content a {
+    color: #60a5fa;
+    font-size: 13px;
+    line-height: 1.2;
+    text-decoration: underline;
+}
+
+.homepage-series-image {
+    display: block;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.homepage-series-watch {
+    display: inline-block;
+    margin-top: 4px;
+    color: #60a5fa;
+    font-size: 13px;
+    text-decoration: underline;
 }
 
 body:has(.event-section) .btn-voir-plus {
