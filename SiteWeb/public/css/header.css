@@ -1,4 +1,5 @@
 /* Style général */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -6,7 +7,8 @@ body {
     padding-top: 120px;
 }
 
-/* Header flottant - Largeur élargie à 1250px */
+/* Header flottant */
+
 .floating-header {
     position: fixed;
     top: 24px;
@@ -14,17 +16,16 @@ body {
     transform: translateX(-50%);
     z-index: 1000;
     width: 96%;
-    max-width: 1250px;
+    max-width: 1500px;
 }
 
-/* Capsule principale découpée en 30 colonnes exactes */
+/* Capsule principale */
+
 .header-container {
     background-color: #000000;
     border: 2px solid #000000;
     border-radius: 100px;
-    display: grid;
-    /* 5fr + 8fr + 4fr + 4fr + 4fr + 5fr = 30fr */
-    grid-template-columns: 5fr 8fr 4fr 4fr 4fr 5fr;
+    display: flex;
     align-items: center;
     box-shadow: none;
     height: 66px;
@@ -34,7 +35,8 @@ body {
     overflow: hidden;
 }
 
-/* Alignement générique des items */
+/* Navigation */
+
 .nav-item {
     background-color: #ffffff;
     border-radius: 999px;
@@ -50,14 +52,25 @@ body {
     position: relative;
     transition: all 0.2s ease;
     white-space: nowrap;
+    box-sizing: border-box;
+    flex: 1;
+    padding: 0 18px;
 }
 
 .nav-item:hover {
     color: #000000;
     font-weight: 800;
+    background-color: #f2f2f2;
 }
 
-/* Zone du LOGO (8/30) */
+/* Séries */
+
+.item-cagnotte {
+    flex: 1;
+}
+
+/* Zone du logo */
+
 .logo-wrapper {
     background-color: #ffffff;
     border-radius: 999px;
@@ -67,9 +80,12 @@ body {
     justify-content: center;
     height: 100%;
     position: relative;
+    flex: 1.6;
+    box-sizing: border-box;
 }
 
-/* Boîte LOGO */
+/* Boîte logo */
+
 .logo-box {
     border: 2px solid #000000;
     border-radius: 12px;
@@ -78,6 +94,7 @@ body {
     box-shadow: none;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
 }
 
 .logo-box:hover {
@@ -93,12 +110,33 @@ body {
     letter-spacing: 1.5px;
 }
 
-/* Icône Billetterie */
+/* Billetterie */
+
 .billetterie-btn {
     display: inline-flex;
     align-items: center;
     gap: 6px;
 }
+
+/* Formulaire de déconnexion */
+
+.logout-form {
+    height: 100%;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Bouton déconnexion */
+
+.logout-btn {
+    width: 100%;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+/* Animation éventuelle */
 
 .bolt {
     font-style: normal;
@@ -107,11 +145,17 @@ body {
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.25); }
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.25);
+    }
 }
 
-/* --- SÉPARATEUR INCURVÉ DE TYPE SABLIER --- */
+/* Séparateurs */
+
 .border-sep {
     position: relative;
 }
@@ -125,8 +169,61 @@ body {
     bottom: 0;
     width: 20px;
     background-color: #000000;
-    /* Incurvation noire avec passage courbe blanc au centre */
     clip-path: path("M 0 0 C 12 16, 12 50, 0 66 L 20 66 C 8 50, 8 16, 20 0 Z");
     z-index: 5;
     pointer-events: none;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+    .floating-header {
+        width: 98%;
+    }
+
+    .nav-item {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+
+    .logo-wrapper {
+        flex: 1.3;
+    }
+
+    .logo-box {
+        padding: 6px 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        padding-top: 100px;
+    }
+
+    .floating-header {
+        top: 12px;
+    }
+
+    .header-container {
+        height: 58px;
+        gap: 2px;
+        padding: 3px;
+    }
+
+    .nav-item {
+        font-size: 11px;
+        padding: 0 6px;
+    }
+
+    .logo-wrapper {
+        flex: 1;
+    }
+
+    .logo-box {
+        padding: 5px 8px;
+    }
+
+    .logo-text {
+        font-size: 12px;
+    }
 }

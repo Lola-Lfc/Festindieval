@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -10,9 +9,7 @@
 </head>
 
 <body>
-=======
 @extends('layouts.app')
->>>>>>> Stashed changes
 
 @section('title', 'Séries')
 
@@ -84,11 +81,7 @@
     @endforeach
 
 </div>
-<<<<<<< Updated upstream
 
 </body>
 
 </html>
-=======
-@endsection
->>>>>>> Stashed changes
