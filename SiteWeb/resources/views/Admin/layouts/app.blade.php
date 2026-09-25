@@ -32,15 +32,15 @@
 
             </a>
 
-            <div class="logo-wrapper border-sep item-logo">
+            <a href="{{ url('/') }}" class="logo-wrapper border-sep item-logo">
 
                 <div class="logo-box">
 
-                    <span class="logo-text">LOGO</span>
+                    <img src="{{ asset('images/festindieval-logo.svg') }}" alt="Festindieval" class="logo-image">
 
                 </div>
 
-            </div>
+            </a>
 
             <a href="{{ url('/invite') }}" class="nav-item border-sep item-invites">
 

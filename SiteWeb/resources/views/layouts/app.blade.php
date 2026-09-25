@@ -38,7 +38,7 @@
 
                 <a href="/" class="logo-box">
 
-                    <span class="logo-text">LOGO</span>
+                    <img src="{{ asset('images/festindieval-logo.svg') }}" alt="Festindieval" class="logo-image">
 
                 </a>
 
