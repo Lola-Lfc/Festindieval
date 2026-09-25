@@ -38,7 +38,9 @@
         </div>
     </header>
 
-    @yield('content')
+    <main class="page-shell">
+        @yield('content')
+    </main>
 
     <footer class="bottom-footer">
         <div class="footer-container">

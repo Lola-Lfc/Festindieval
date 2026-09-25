@@ -94,15 +94,18 @@ body {
 }
 
 .countdown-item .number {
-    font-size: 64px;
-    margin-bottom: 6px;
-    letter-spacing: -1px;
+    font-size: 100px;
+    margin-bottom: 8px;
+    letter-spacing: -2px;
+    -webkit-text-stroke: 6px #ffffff;
+    text-shadow: 0 0 0 transparent;
 }
 
 .countdown-item .label {
     font-size: 24px;
     letter-spacing: 2px;
     color: #d9d9d9;
+    -webkit-text-stroke: 1.5px #ffffff;
 }
 
 /* Cartes d'informations principales */
@@ -115,7 +118,7 @@ body {
 }
 
 .info-card {
-    background-color: #ffffff;
+    background-color: #2f2f2f;
     border: 2px solid #1a1a1a;
     border-radius: 24px;
     padding: 28px 24px;
@@ -196,7 +199,7 @@ body {
 }
 
 .edition-card {
-    background-color: #ffffff;
+    background-color: #2f2f2f;
     border: 2px solid #1a1a1a;
     border-radius: 28px;
     padding: 32px 24px 50px 24px;
@@ -308,9 +311,9 @@ body {
 /* Compte à rebours : remplissage noir et contour blanc */
 .countdown-item .number,
 .countdown-item .label {
-    color: #000000;
-    -webkit-text-stroke: 1px #ffffff;
-    text-shadow: 0 0 1px #ffffff;
+    color: #ffffff;
+    -webkit-text-stroke: 0;
+    text-shadow: none;
 }
 
 /* Thème noir commun aux sections de l'accueil */
@@ -335,7 +338,7 @@ body {
 
 .info-card,
 .edition-card {
-    background-color: #000000;
+    background-color: #2f2f2f;
     border-color: #ffffff;
     box-shadow: 4px 6px 0 #ffffff;
 }
@@ -376,12 +379,13 @@ body {
 
 /* Priorité finale pour le compte à rebours */
 .event-section .countdown-item .number,
-.event-section .countdown-item .label {
-    color: #000000 !important;
-    -webkit-text-fill-color: #000000;
-    -webkit-text-stroke: 1.5px #ffffff;
-    text-shadow: 0 0 1px #ffffff;
-    paint-order: stroke fill;
+.event-section .countdown-item .label,
+.event-section .countdown-item .bis {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+    -webkit-text-stroke: 0 !important;
+    text-shadow: none !important;
+    paint-order: normal;
 }
 
 .event-section .title-blue,
@@ -461,7 +465,7 @@ body:has(.event-section) .edition-cards-container {
 
 body:has(.event-section) .info-card,
 body:has(.event-section) .edition-card {
-    background: #000000;
+    background: #2f2f2f;
     transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
@@ -643,7 +647,7 @@ body:has(.event-section) .event-section .countdown-item .number,
 body:has(.event-section) .event-section .countdown-item .label {
     color: #000000 !important;
     -webkit-text-fill-color: #000000;
-    -webkit-text-stroke: 1.5px #ffffff;
+    -webkit-text-stroke: 6px #ffffff;
     text-shadow: 0 0 1px #ffffff;
     paint-order: stroke fill;
 }
@@ -660,7 +664,7 @@ body:has(.event-section) .rdv-title {
 }
 
 body:has(.event-section) .countdown-item .number {
-    font-size: 48px;
+    font-size: 70px;
     letter-spacing: 0;
 }
 

@@ -60,13 +60,13 @@ body {
 }
 
 body {
-    background: #000000;
-    color: #ffffff;
+    background: #ffffff;
+    color: #000000;
 }
 
 .jour {
-    border: 2px solid #ffffff;
-    background: #3f3f3f;
+    border: 2px solid #000000;
+    background: #ffffff;
 }
 
 .jour > h2 {
@@ -83,6 +83,16 @@ h1,
 .evenement p,
 .evenement .horaire {
     color: #000000;
-    -webkit-text-stroke: 1px #ffffff;
-    paint-order: stroke fill;
+    -webkit-text-stroke: 0;
+    text-shadow: none;
+    paint-order: normal;
+}
+
+.jour > h2,
+.jour h2 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    -webkit-text-stroke: 0 !important;
+    text-shadow: none !important;
+    paint-order: normal;
 }

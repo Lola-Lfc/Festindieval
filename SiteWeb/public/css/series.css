@@ -68,18 +68,18 @@ body {
 }
 
 body {
-    background: #000000;
-    color: #ffffff;
+    background: #ffffff;
+    color: #000000;
 }
 
 .serie-card {
-    border: 2px solid #ffffff;
-    background: #3f3f3f;
+    border: 2px solid #000000;
+    background: #ffffff;
 }
 
 .serie-content a {
     background: #000000;
-    border: 2px solid #ffffff;
+    border: 2px solid #000000;
 }
 
 h1,
@@ -87,6 +87,7 @@ h1,
 .serie-content p,
 .serie-content a {
     color: #000000;
-    -webkit-text-stroke: 1px #ffffff;
-    paint-order: stroke fill;
+    -webkit-text-stroke: 0;
+    text-shadow: none;
+    paint-order: normal;
 }

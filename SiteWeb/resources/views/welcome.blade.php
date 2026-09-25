@@ -15,19 +15,19 @@
         <div class="countdown-container">
             <div class="countdown-item">
                 <span class="number" id="days">00</span>
-                <span class="label">JOURS</span>
+                <span class="bis">JOURS</span>
             </div>
             <div class="countdown-item">
                 <span class="number" id="hours">00</span>
-                <span class="label">HEURES</span>
+                <span class="bis">HEURES</span>
             </div>
             <div class="countdown-item">
                 <span class="number" id="minutes">00</span>
-                <span class="label">MIN</span>
+                <span class="bis">MIN</span>
             </div>
             <div class="countdown-item">
                 <span class="number" id="seconds">00</span>
-                <span class="label">SEC</span>
+                <span class="bis">SEC</span>
             </div>
         </div>
 
