@@ -7,6 +7,7 @@
 @endsection
 
 @section('content')
+<main class="billetterie-page">
 <h1>Billetterie</h1>
 
 @if (session('success'))
@@ -87,4 +88,5 @@
         });
     });
 </script>
+</main>
 @endsection

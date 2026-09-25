@@ -118,3 +118,88 @@ h1,
     text-shadow: none;
     paint-order: normal;
 }
+
+.billetterie-page {
+    width: min(1120px, calc(100% - 48px));
+    margin: 28px auto 70px;
+}
+
+.billetterie-page > h1 {
+    margin: 0 0 24px;
+    color: #111827;
+    font-size: 32px;
+}
+
+.billets-container {
+    gap: 18px;
+}
+
+.billet-card {
+    min-height: 250px;
+    border: 1px solid #111827;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 3px 4px 0 #111827;
+}
+
+.billet-card h2,
+.billet-card p,
+.billet-card .prix {
+    color: #111827;
+    -webkit-text-stroke: 0;
+}
+
+.billet-card .prix {
+    margin: 18px 0 10px;
+}
+
+.billet-card button,
+.purchase-dialog button {
+    border: 1px solid #111827;
+    border-radius: 999px;
+    background: #111827;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.billet-card button:hover,
+.purchase-dialog button:hover {
+    background: #ffffff;
+    color: #111827;
+}
+
+.purchase-dialog {
+    width: min(380px, calc(100% - 32px));
+    padding: 26px;
+    border: 1px solid #111827;
+    border-radius: 14px;
+    background: #ffffff;
+    color: #111827;
+    box-shadow: 4px 5px 0 #111827;
+}
+
+.purchase-dialog h2,
+.purchase-dialog p,
+.purchase-dialog label {
+    color: #111827;
+    -webkit-text-stroke: 0;
+    text-shadow: none;
+}
+
+.purchase-dialog input {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #9ca3af;
+    color: #111827;
+}
+
+.purchase-dialog .purchase-cancel {
+    background: #ffffff;
+    color: #111827;
+}
+
+@media (max-width: 600px) {
+    .billetterie-page {
+        width: min(100% - 28px, 520px);
+    }
+}
